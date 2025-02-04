@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-width: 1366px;
+  overflow-x: auto;
+}
+
+.select-none {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Стили для контейнера изображения */
+.relative.inline-block {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  overflow: auto;
+  width: 1366px;
+  max-height: calc(100vh - 180px);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Стили для кликабельных областей */
+area {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Анимации пульсации для разных состояний */
+@keyframes pulse-very-slow {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes pulse-slow {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.6; }
+}
+
+@keyframes pulse-medium {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.7; }
+}
+
+@keyframes pulse-fast {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+.animate-pulse-very-slow {
+  animation: pulse-very-slow 3s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2.5s infinite;
+}
+
+.animate-pulse-medium {
+  animation: pulse-medium 2s infinite;
+}
+
+.animate-pulse-fast {
+  animation: pulse-fast 1.5s infinite;
+}
+
+/* Стилизуем скроллбары */
+.relative.inline-block::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.relative.inline-block::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+.relative.inline-block::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.relative.inline-block::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
